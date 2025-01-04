@@ -34,7 +34,7 @@ RUN curl -sL https://deb.nodesource.com/setup_18.x -o nodesource_setup.sh && \
 # Очищаем кэш apt для уменьшения размера образа
 RUN rm -rf /var/lib/apt/lists/ /var/cache/apt/archives/ /tmp/*
 # Устанавливаем переменные окружения для работы приложения
-ENV HIKKAHOST=T=true \
+ENV HIKKAHOST=true \
     GIT_PYTHON_REFRESH=quiet \
     PIP_NO_CACHE_DIR=1
 # Копируем собранное приложение и виртуальное окружение из этапа сборки
